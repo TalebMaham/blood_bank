@@ -1,0 +1,23 @@
+# Environnement virtuel
+env/
+venv/
+*.pyc
+__pycache__/
+
+# Configurations locales
+
+media/
+*.log
+
+# Django migrations
+*/migrations/
+
+# PyCharm specific
+.idea/
+
+# Static and media files
+/static/
+.DS_Store
+
+# Fichiers de cache
+*.cache
