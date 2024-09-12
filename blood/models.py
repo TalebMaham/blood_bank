@@ -9,9 +9,16 @@ class Donateur(models.Model):
     gs_rh = models.CharField(max_length=3)
     ville = models.CharField(max_length=100)
     telephone = models.CharField(max_length=15)
+    
+    # Champs pour les sérologies (positif ou négatif)
+    hps = models.BooleanField(default=False)  # HPS: Positif ou Négatif
+    hcv = models.BooleanField(default=False)  # HCV: Positif ou Négatif
+    hiv = models.BooleanField(default=False)  # HIV: Positif ou Négatif
+    bv = models.BooleanField(default=False)   # BV: Positif ou Négatif
 
     def __str__(self):
-        return f"{self.prenom} {self.nom} ({self.groupe_sanguin})"
+        return f"{self.prenom} {self.nom} ({self.gs_rh})"
+
 
 # Modèle Hôpital
 class Hopital(models.Model):
