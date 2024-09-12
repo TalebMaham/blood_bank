@@ -21,3 +21,5 @@ media/
 
 # Fichiers de cache
 *.cache
+
+*.sqlite3
