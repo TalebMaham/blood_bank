@@ -6,7 +6,7 @@ class Donateur(models.Model):
     prenom = models.CharField(max_length=100)
     nom = models.CharField(max_length=100)
     age = models.IntegerField()
-    groupe_sanguin = models.CharField(max_length=3)
+    gs_rh = models.CharField(max_length=3)
     ville = models.CharField(max_length=100)
     telephone = models.CharField(max_length=15)
 
@@ -37,7 +37,7 @@ class Medecin(models.Model):
 class Receveur(models.Model):
     prenom = models.CharField(max_length=100)
     nom = models.CharField(max_length=100)
-    groupe_sanguin = models.CharField(max_length=3)
+    gs_rh = models.CharField(max_length=3)
     hopital = models.ForeignKey(Hopital, on_delete=models.CASCADE)
     medecin = models.ForeignKey(Medecin, on_delete=models.SET_NULL, null=True)
 
@@ -47,7 +47,7 @@ class Receveur(models.Model):
 # Modèle Poche de sang
 class Poche(models.Model):
     numero_tubulaire = models.CharField(max_length=50, unique=True)
-    groupe_sanguin = models.CharField(max_length=3)
+    gs_rh = models.CharField(max_length=3)
     quantite_ml = models.IntegerField()
     date_de_collecte = models.DateField()
     date_d_expiration = models.DateField()
