@@ -10,7 +10,7 @@ media/
 *.log
 
 # Django migrations
-*/migrations/
+#*/migrations/
 
 # PyCharm specific
 .idea/
